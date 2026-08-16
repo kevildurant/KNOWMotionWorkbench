@@ -1,0 +1,9 @@
+{
+  "name": "know-motion-workbench",
+  "version": "1.3.1",
+  "private": true,
+  "description": "Visual After Effects CEP toolbox with recursive resource indexing and cached AE-rendered hover previews.",
+  "scripts": {
+    "test": "node tests/static-check.mjs"
+  }
+}

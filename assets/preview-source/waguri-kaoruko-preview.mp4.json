@@ -1,0 +1,18 @@
+{
+  "role": "bundled-unified-ae-preview-source",
+  "profile": "waguri-kaoruko-v1",
+  "sourceType": "user-provided-video",
+  "sourceFileName": "XW-和栗薰子-6.mp4",
+  "sourceSha256": "38E47DDE440EE401F53718A72899954222FFBBC10F85602D7A9417B7FB772155",
+  "outputSha256": "F1A5C9DD557169EFA2F491934A4C76B69211915464FF46C778FBF00AF8E1C752",
+  "transform": {
+    "durationSeconds": 2.5,
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "codec": "H.264",
+    "pixelFormat": "yuv420p",
+    "audio": false,
+    "loopedToDuration": true
+  }
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AE 资源工作台 / AE Asset Workbench
+  面板注册：AE 16.0+（CC 2019 及以上），调试模式已开启时可直接加载。
+-->
+<ExtensionManifest Version="7.0"
+    ExtensionBundleId="com.ae.assetworkbench"
+    ExtensionBundleVersion="1.0.0"
+    ExtensionBundleName="AE 资源工作台"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ExtensionList>
+        <Extension Id="com.ae.assetworkbench.panel" Version="1.0.0" />
+    </ExtensionList>
+
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="AEFT" Version="[16.0,99.9]" />
+        </HostList>
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="10.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+
+    <DispatchInfoList>
+        <Extension Id="com.ae.assetworkbench.panel">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./client/index.html</MainPath>
+                    <ScriptPath>./host/host.jsx</ScriptPath>
+                    <CEFCommandLine>
+                        <!-- Node 支持：读写文件夹、生成缩略图 -->
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
+                        <!-- 允许面板直接显示本地文件（file:// 预览） -->
+                        <Parameter>--allow-file-access-from-files</Parameter>
+                        <Parameter>--allow-file-access</Parameter>
+                        <Parameter>--disable-background-timer-throttling</Parameter>
+                    </CEFCommandLine>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                    <AutoReloadContent>false</AutoReloadContent>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>AE 资源工作台</Menu>
+                    <Geometry>
+                        <Size>
+                            <Width>1000</Width>
+                            <Height>620</Height>
+                        </Size>
+                        <MinSize>
+                            <Width>640</Width>
+                            <Height>380</Height>
+                        </MinSize>
+                        <MaxSize>
+                            <Width>4000</Width>
+                            <Height>3000</Height>
+                        </MaxSize>
+                    </Geometry>
+                    <Icons />
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
+

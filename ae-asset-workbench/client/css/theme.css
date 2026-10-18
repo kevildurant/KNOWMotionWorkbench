@@ -1,0 +1,179 @@
+/* 主题与基础样式：仿 Overlay Manager 深色观感 */
+:root {
+  --bg: #22252a;
+  --panel: #282c33;
+  --panel-2: #2f343c;
+  --panel-3: #353b44;
+  --line: #3a4048;
+  --line-soft: #31363e;
+  --text: #d7dae0;
+  --text-dim: #a9b0ba;
+  --muted: #8b939f;
+  --faint: #6c7480;
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.16);
+  --accent-line: rgba(59, 130, 246, 0.55);
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --danger: #f87171;
+  --sel: rgba(59, 130, 246, 0.2);
+  --row-h: 26px;
+  --fx-row-h: 46px;
+  --radius: 4px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --font: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Cascadia Mono", Consolas, "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 1.45;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--text);
+}
+
+button {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 3px 9px;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+button:hover {
+  background: var(--panel-3);
+  border-color: #4b535e;
+}
+
+button:active {
+  background: #22262c;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: #2f6fd0;
+  color: #fff;
+}
+
+button.primary:hover {
+  background: #4b8df7;
+}
+
+button.mini {
+  padding: 2px 7px;
+  font-size: 11px;
+}
+
+button.icon {
+  padding: 2px 6px;
+  min-width: 24px;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-dim);
+}
+
+button.ghost:hover {
+  background: var(--panel-2);
+  border-color: var(--line);
+  color: var(--text);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+input[type="text"],
+input[type="search"],
+input:not([type]),
+select {
+  background: #23272d;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 3px 7px;
+  outline: none;
+  min-width: 0;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent-line);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444b55;
+  border-radius: 6px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #566070;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.dim {
+  color: var(--text-dim);
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
